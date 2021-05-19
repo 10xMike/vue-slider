@@ -35,16 +35,23 @@ const app = new Vue({
                 return this.counter = 0;
             }
             return this.counter += 1;
-        }
+        },
+
+        selectImage(index){
+         return this.counter = index;
+        },   
     },
 
+    
+
     mounted(){
+        
         document.addEventListener('keyup', (e) =>{
             if (e.key === 'ArrowRight'){
-                app.next();
+                this.next();
             }
             if (e.key === 'ArrowLeft');{
-                app.prev();
+                this.prev();
             }
         })
     },
