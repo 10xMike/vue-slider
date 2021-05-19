@@ -39,17 +39,17 @@ const app = new Vue({
     },
 
     mounted(){
-        document.addEventListener('keyup', () =>{
-            let button = action.key;
-            if (button === 'prev'){
-                this.prev();
-            } else (button === 'next');{
-                this.next();
+        document.addEventListener('keyup', (e) =>{
+            if (e.key === 'ArrowRight'){
+                app.next();
+            }
+            if (e.key === 'ArrowLeft');{
+                app.prev();
             }
         })
     },
     mounted(){
         setInterval(this.next, 5000)
     }
-})
+});
 
