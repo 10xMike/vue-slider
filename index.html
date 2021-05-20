@@ -23,7 +23,7 @@
             object-fit: cover;
         }
 
-        .active{
+        .active {
             color: greenyellow;
         }
     </style>
@@ -37,7 +37,8 @@
         <div class="images">
             <img :src="images[counter]" alt="">
             <nav class="">
-                <i @click="selectImage(index)" class="far fa-circle" :class="counter === index ? 'active' : '' " v-for="(img, index) in images" aria-hidden="true"></i>
+                <i @click="selectImage(index)" class="far fa-circle" :class="counter === index ? 'active' : '' "
+                    v-for="(img, index) in images" aria-hidden="true"></i>
             </nav>
         </div>
 
